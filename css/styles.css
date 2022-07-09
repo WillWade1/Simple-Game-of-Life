@@ -1,0 +1,33 @@
+body {
+    background-color: #282c34;
+    font-family: Roboto, serif;
+}
+
+h1 {
+    color: #63e11a;
+
+    text-align: center;
+}
+
+#game_div{
+    justify-content: center;
+}
+
+#game_div{
+    text-align: center;
+    margin: 0 auto;
+}
+
+#gol_canvas{
+    border: 2px solid #63e11a;
+
+
+}
+
+#controls_div{
+    text-align: center;
+}
+
+button{
+    font-family: Roboto, serif;
+}
