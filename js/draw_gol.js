@@ -64,9 +64,6 @@ function startButtonHandler(){
     running = !running
 }
 
-
-
-
 app.animationUpdate = function (delta){
     timer+=delta
     while(timer>30 && running){
@@ -79,9 +76,16 @@ app.ticker.add(app.animationUpdate)
 function timeStep(){
     gol.lifeCycle()
 }
-bee_hive3 = [[1,1],[1,-1],[0,1], [0,-1], [-1,1],[-1,-1],[-2,0],[2,0]]
-gol.addPattern(20, 20, bee_hive3)
 
+bee_hive3 = [[1,1],[1,-1],[0,1], [0,-1], [-1,1],[-1,-1],[-2,0],[2,0]]
+gol.addPattern(60, 50, bee_hive3)
+
+gosper_glider_gun=[[0,0],[1,0],[0,1],[1,1], [10,0], [10,1], [10,2], [11,-1], [12,-2], [13,-2], [15,-1],
+    [16,0], [16,1], [16,2],[17,1], [11,3], [12,4],[13,4], [15,3],[14,1],
+    [20,0],[20,-1],[20,-2], [21,0],[21,-1],[21,-2], [22,1],[22,-3], [24,-3], [24,-4],[24,1],[24,2],
+    [34,-1],[34,-2],[35,-1],[35,-2]]
+
+gol.addPattern(10, 10, gosper_glider_gun)
 function clickCell(x,y){
     let grid_x = Math.round((x-5) / 10);
     let grid_y = Math.round((y-5) / 10);
